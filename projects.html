@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | A Munwar Basha</title>
+    <meta name="description"
+        content="Featured projects by A Munwar Basha – Data Analytics dashboards, web applications, and AI-powered tools.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <canvas id="particles"></canvas>
+
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1 class="page-title anim-fade-up">Featured <span class="gradient-text">Projects</span></h1>
+                <p class="page-subtitle anim-fade-up delay-1">A showcase of my work spanning web applications, APIs, and data visualization projects.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Category Filter Buttons -->
+                <div class="filter-bar anim-fade-up delay-2">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="data-viz">Data Visualization</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="api">API Integration</button>
+                    <button class="filter-btn" data-filter="webapp">Web App</button>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project 1: Sales Performance Analysis Dashboard -->
+                    <div class="project-card glass reveal-up" data-category="data-viz">
+                        <div class="project-card-img">
+                            <img src="images/sales-dashboard.png" alt="Sales Performance Dashboard">
+                            <div class="project-card-overlay">
+                                <span class="overlay-label">Data Visualization</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Sales Performance Dashboard</h3>
+                            <p class="project-card-desc">DAX-based KPIs including revenue, profit, and trend analysis to identify high-performing regions and products.</p>
+                            <div class="project-card-tags">
+                                <span>Power BI</span>
+                                <span>Power Query</span>
+                                <span>DAX</span>
+                            </div>
+                            <div class="project-card-btns">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/munwarbasha98/Sales-Performance-Analysis-Dashboard" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Road Accident Analysis -->
+                    <div class="project-card glass reveal-up delay-1" data-category="fullstack frontend webapp">
+                        <div class="project-card-img">
+                            <img src="images/accident-dashboard.png" alt="Road Accident Analysis">
+                            <div class="project-card-overlay">
+                                <span class="overlay-label">Full Stack</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Road Accident Analysis &amp; Blackspot Detection</h3>
+                            <p class="project-card-desc">A web application for analyzing road accidents, detecting black spots, and managing safety measures with real-time dashboards.</p>
+                            <div class="project-card-tags">
+                                <span>React JS</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>DSA</span>
+                                <span>C++</span>
+                            </div>
+                            <div class="project-card-btns">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/munwarbasha98/Road-Accident-Analysis-and-Blackspot-Detection-System" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: Smart Home Energy Management System -->
+                    <div class="project-card glass reveal-up delay-2" data-category="fullstack frontend webapp">
+                        <div class="project-card-img">
+                            <img src="images/home-energy.png" alt="Smart Home Energy Management System">
+                            <div class="project-card-overlay">
+                                <span class="overlay-label">Full Stack</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">Smart Home Energy Management System</h3>
+                            <p class="project-card-desc">A full stack IoT-integrated platform for monitoring and optimizing household energy consumption with real-time dashboards, device control, and AI-based usage predictions.</p>
+                            <div class="project-card-tags">
+                                <span>React JS</span>
+                                <span>Tailwind CSS</span>
+                                <span>Java Spring Boot</span>
+                                <span>MySQL</span>
+                                <span>Node.js</span>
+                                <span>Chart.js</span>
+                                <span>REST API</span>
+                            </div>
+                            <div class="project-card-btns">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/munwarbasha98/Smart-Home-Energy-Management-System" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: AI-Driven Art Insights -->
+                    <div class="project-card glass reveal-up delay-2" data-category="api frontend webapp">
+                        <div class="project-card-img">
+                            <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&h=340&fit=crop" alt="AI-Driven Art Insights">
+                            <div class="project-card-overlay">
+                                <span class="overlay-label">API Integration</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">AI-Driven Art Insights (ArtistAI)</h3>
+                            <p class="project-card-desc">A responsive web app that provides AI-powered feedback and assistance for artists with artwork analysis and art chat.</p>
+                            <div class="project-card-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+                            <div class="project-card-btns">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/munwarbasha98/PrishArt" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; 2026 A Munwar Basha &mdash; Aspiring Data Analyst</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/munwarbasha" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/munwarbasha98" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:munwarbasha986@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

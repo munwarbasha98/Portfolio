@@ -29,6 +29,29 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+/* ── Prefetch Internal Pages for Faster Navigation ── */
+const prefetchedPages = new Set();
+
+function prefetchPage(href) {
+    if (!href || prefetchedPages.has(href)) return;
+    if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+
+    const linkEl = document.createElement('link');
+    linkEl.rel = 'prefetch';
+    linkEl.href = href;
+    linkEl.as = 'document';
+    document.head.appendChild(linkEl);
+    prefetchedPages.add(href);
+}
+
+document.querySelectorAll('a.nav-link').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href === window.location.pathname.split('/').pop()) return;
+
+    link.addEventListener('mouseenter', () => prefetchPage(href), { passive: true });
+    link.addEventListener('touchstart', () => prefetchPage(href), { passive: true });
+});
+
 /* ── Intersection Observer for Scroll Reveals ── */
 const reveals = document.querySelectorAll('.reveal-up');
 
